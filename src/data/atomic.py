@@ -84,7 +84,7 @@ class GenerationDataLoader(DataLoader):
             return True
 
         for split in self.data:
-            file_name = "v4_atomic_{}.csv".format(map_name(split))
+            file_name = "combine_{}.csv".format(map_name(split))
 
             df = pandas.read_csv("{}/{}".format(path, file_name), index_col=0)
             df.iloc[:, :9] = df.iloc[:, :9].apply(

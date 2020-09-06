@@ -54,7 +54,7 @@ save_name = os.path.join(
     save_path, "{}.pickle".format(utils.make_name_string(opt.data)))
 
 data_loader = data.make_data_loader(opt, categories)
-data_loader.load_data("data/atomic/")
+data_loader.load_data("data/combined/")
 random.shuffle(data_loader.data["dev"]["total"])
 
 data_loader.make_tensors(text_encoder, special, test=False)
